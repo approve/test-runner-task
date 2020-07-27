@@ -17,9 +17,9 @@ class Runner {
     this.files.push(filePath)
   }
 
-  run() {
+  async run() {
     this.files.forEach(require);
-    this.tests.forEach(test => test.run());
+    await Promise.all(this.tests.map(test => test.run()));
   }
 }
 

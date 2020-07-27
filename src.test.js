@@ -1,10 +1,12 @@
 const assert = require('assert');
 const { add2 } = require('./src.js');
 
-it('should pass', () => {
-  assert.strictEqual(add2(2), 4);
+it('should pass', async () => {
+  const res = await add2(2);
+  assert.strictEqual(res, 4);
 });
 
-it('should not pass', () => {
-  assert.strictEqual(add2(2), 5);
+it('should not pass', async () => {
+  const res = await add2(2);
+  assert.strictEqual(res, 5);
 });
