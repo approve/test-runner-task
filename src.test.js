@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { add2 } = require('./src.js');
 
-it('should pass', async () => {
+it.only('should pass', async () => {
   const res = await add2(2);
   assert.strictEqual(res, 4);
 });

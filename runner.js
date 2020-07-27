@@ -4,9 +4,16 @@ class Runner {
   constructor() {
     this.files = [];
     this.tests = [];
+    this.onlyTests = [];
 
     global.it = (name, callback) => {
       this.tests.push(
+        new Test(name, callback)
+      );
+    }
+
+    global.it.only = (name, callback) => {
+      this.onlyTests.push(
         new Test(name, callback)
       );
     }
@@ -19,7 +26,11 @@ class Runner {
 
   async run() {
     this.files.forEach(require);
-    await Promise.all(this.tests.map(test => test.run()));
+    if (this.onlyTests.length) {
+      await Promise.all(this.onlyTests.map(test => test.run()));
+    } else {
+      await Promise.all(this.tests.map(test => test.run()));
+    }
   }
 }
 
