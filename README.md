@@ -16,12 +16,13 @@ Load each file and run each `it` method of the test.
 
 3. Print result of each test function
 
-### Part 2: BeforeEach/AfterEach
-1. Implement beforeEach() and afterEach()
-
-### Part 3: Rich API
-1. Implement support of `async` function
+### Part 2: Rich API
+1. Implement support of async function
 2. Support of `it.only` method
+
+### Part 3: Support suite
+1. Implement `describe()`
+1. Implement `beforeEach()` and `afterEach()`
 
 ### Part 4: Test reporter
 1. Show basic reporter of all tests
