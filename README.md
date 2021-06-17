@@ -25,8 +25,8 @@ X failed: <name-of-failed-test>
 ```
 
 ### Part 2: Rich API
-1. Implement support of async function
-2. Support of `it.only` method
+1. Support of `it.only` method
+2. Implement support of async function
 
 ### Part 3: Support suite
 1. Implement `describe()`
